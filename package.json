@@ -1,0 +1,98 @@
+{
+  "name": "mermaid-magic",
+  "displayName": "Mermaid Magic",
+  "description": "Visual flowchart editor with Mermaid and Lucid CSV export.",
+  "version": "0.0.2",
+  "publisher": "kevindowling",
+  "icon": "media/mermaid.png",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/kevindowling/mermaid-magic.git"
+  },
+  "categories": [
+    "Other"
+  ],
+  "files": [
+    "out/extension.js",
+    "out/extension.js.map",
+    "media/**",
+    "package.json",
+    "README.md"
+  ],
+  "activationEvents": [
+    "onView:mermaidMagic.sidebar",
+    "onCommand:mermaidMagic.openEditor",
+    "onCommand:mermaidMagic.openText",
+    "onCommand:mermaidMagic.importMermaid",
+    "onCommand:mermaidMagic.openMermaidFile",
+    "onCommand:mermaidMagic.exportMermaid",
+    "onCommand:mermaidMagic.exportLucidCsv"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "mermaidMagic.openEditor",
+        "title": "Mermaid Magic: Open Editor"
+      },
+      {
+        "command": "mermaidMagic.openText",
+        "title": "Mermaid Magic: Open Mermaid Text"
+      },
+      {
+        "command": "mermaidMagic.importMermaid",
+        "title": "Mermaid Magic: Import Mermaid From Active Editor"
+      },
+      {
+        "command": "mermaidMagic.openMermaidFile",
+        "title": "Mermaid Magic: Open Mermaid File In Editor"
+      },
+      {
+        "command": "mermaidMagic.exportMermaid",
+        "title": "Mermaid Magic: Export Mermaid"
+      },
+      {
+        "command": "mermaidMagic.exportLucidCsv",
+        "title": "Mermaid Magic: Export Lucid CSV"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "mermaidMagic",
+          "title": "Mermaid Magic",
+          "icon": "media/mermaid-white.png"
+        }
+      ]
+    },
+    "views": {
+      "mermaidMagic": [
+        {
+          "id": "mermaidMagic.sidebar",
+          "name": "Editor",
+          "type": "webview"
+        }
+      ]
+    },
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "mermaidMagic.openMermaidFile",
+          "when": "resourceExtname == .mmd || resourceExtname == .mermaid",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.4.0"
+  }
+}
