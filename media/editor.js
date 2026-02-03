@@ -7,6 +7,7 @@
   const diagramType = document.getElementById("diagram-type");
   const textDrawer = document.getElementById("text-drawer");
   const toggleText = document.getElementById("toggle-text");
+  const hamburgerToggle = document.getElementById("hamburger-toggle");
   const closeText = document.getElementById("close-text");
   const applyText = document.getElementById("apply-text");
   const exportLucid = document.getElementById("export-lucid");
@@ -194,6 +195,13 @@
 
   if (toggleText && textDrawer) {
     toggleText.addEventListener("click", () => {
+      const isOpen = textDrawer.classList.contains("open");
+      setDrawerOpen(!isOpen);
+    });
+  }
+
+  if (hamburgerToggle && textDrawer) {
+    hamburgerToggle.addEventListener("click", () => {
       const isOpen = textDrawer.classList.contains("open");
       setDrawerOpen(!isOpen);
     });

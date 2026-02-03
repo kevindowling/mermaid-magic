@@ -1,0 +1,126 @@
+{
+  "version": 2,
+  "type": "flowchart",
+  "flowchart": {
+    "nodes": [
+      {
+        "id": 2,
+        "label": "Start",
+        "x": 180,
+        "y": 140,
+        "width": 160,
+        "height": 64,
+        "shape": "terminator",
+        "fill": "#d06262",
+        "stroke": "#333333",
+        "textColor": "#111111"
+      },
+      {
+        "id": 3,
+        "label": "Process",
+        "x": 420,
+        "y": 140,
+        "width": 160,
+        "height": 64,
+        "shape": "process",
+        "fill": "#d06262",
+        "stroke": "#333333",
+        "textColor": "#111111"
+      }
+    ],
+    "edges": [
+      {
+        "id": 100,
+        "from": 2,
+        "to": 3,
+        "label": "",
+        "stroke": "#444444",
+        "arrow": "arrow"
+      }
+    ]
+  },
+  "sequence": {
+    "participants": [
+      {
+        "id": 4,
+        "name": "User"
+      },
+      {
+        "id": 5,
+        "name": "System"
+      }
+    ],
+    "messages": [
+      {
+        "id": 101,
+        "from": 4,
+        "to": 5,
+        "label": "Request",
+        "line": "solid"
+      }
+    ]
+  },
+  "pie": {
+    "title": "Usage",
+    "slices": [
+      {
+        "id": 102,
+        "label": "Alpha",
+        "value": 40,
+        "color": "#60a5fa"
+      },
+      {
+        "id": 103,
+        "label": "Beta",
+        "value": 60,
+        "color": "#34d399"
+      }
+    ]
+  },
+  "gantt": {
+    "title": "Project Plan",
+    "dateFormat": "YYYY-MM-DD",
+    "tasks": [
+      {
+        "id": 104,
+        "section": "Design",
+        "label": "Wireframes",
+        "start": "2024-01-01",
+        "end": "2024-01-05",
+        "status": ""
+      },
+      {
+        "id": 105,
+        "section": "Build",
+        "label": "Implementation",
+        "start": "2024-01-06",
+        "end": "2024-01-14",
+        "status": "active"
+      }
+    ]
+  },
+  "journey": {
+    "title": "User Journey",
+    "steps": [
+      {
+        "id": 106,
+        "section": "Discover",
+        "task": "Browse",
+        "score": 4,
+        "personas": [
+          "User"
+        ]
+      },
+      {
+        "id": 107,
+        "section": "Purchase",
+        "task": "Checkout",
+        "score": 3,
+        "personas": [
+          "User"
+        ]
+      }
+    ]
+  },
+  "nextId": 112
+}

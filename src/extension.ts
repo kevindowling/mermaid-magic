@@ -1820,6 +1820,11 @@ function getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri): s
 <body>
   <div id="app">
     <div class="canvas-pane">
+      <button id="hamburger-toggle" class="hamburger hamburger-fab" aria-label="Mermaid Text" title="Mermaid Text">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <div id="text-drawer" class="drawer" aria-hidden="true">
         <h2>Mermaid Text</h2>
         <textarea id="mermaid-output"></textarea>

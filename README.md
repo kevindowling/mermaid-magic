@@ -1,30 +1,38 @@
-# Mermaid Magic (VS Code Extension)
+# Mermaid Magic
 
-Visual flowchart and sequence editor with Mermaid and Lucid CSV export.
+Visual Mermaid editor for VS Code with Lucid CSV export.
 
-## Quick Start
+**What you can do**
+- Build diagrams visually with nodes, edges, and labels.
+- Edit Mermaid text side-by-side and keep it in sync.
+- Export to Mermaid or Lucid CSV.
+- Open and edit any `.mmd` or `.mermaid` file in your workspace.
 
-1. Run `npm install`
-2. Run `npm run compile`
-3. Press `F5` in VS Code to launch an Extension Development Host.
-4. Use the Mermaid Magic icon in the Activity Bar to open the sidebar controls (open or create editor windows), or run the command palette:
-   - `Mermaid Magic: Open Editor`
-   - `Mermaid Magic: Export Mermaid`
-   - `Mermaid Magic: Export Lucid CSV`
-   - `Mermaid Magic: Import Mermaid From Active Editor`
+**Get Started**
+1. Open the Mermaid Magic view from the Activity Bar.
+2. Select a Mermaid file from the list, or create a new diagram in the editor.
+3. Use the side pane to edit nodes, edges, arrows, colors, and labels.
+4. Use the Mermaid text drawer to edit raw Mermaid and click **Apply Text**.
 
-## How It Works
+**Editing Basics**
+- Click a node to select it. Shift/Ctrl-click to select multiple nodes.
+- Drag nodes to move them. Use middle mouse to pan the canvas.
+- Drag from the small side handles on a node to create a new edge.
+- Edge labels appear in the editor and export.
 
-- The editor stores your diagram in `mermaid-magic.json` at the workspace root.
-- The webview lets you create/edit flowcharts (nodes/edges) and sequences (participants/messages).
-- Use mouse wheel to zoom and drag the canvas background to pan.
-- Mermaid text is generated automatically; use the hamburger menu to open/close the Mermaid text drawer. You can edit the text there and click **Apply Text**, or open a text editor via `Mermaid Magic: Open Mermaid Text`.
-- If you edit the Mermaid text opened by Mermaid Magic and save it, the diagram is imported back automatically (it includes a `%% mermaid-magic` marker).
-- Lucid CSV export targets the flowchart model.
-- Right click a `.mmd` or `.mermaid` file in the explorer and choose `Mermaid Magic: Open Mermaid File In Editor` to import it into the visual editor.
+**Export**
+- `Mermaid Magic: Export Mermaid` saves Mermaid text.
+- `Mermaid Magic: Export Lucid CSV` exports a Lucid-compatible CSV.
 
-## Files
+**Supported Diagram Types**
+- Flowchart
+- Sequence Diagram
+- Gantt
+- Pie
+- User Journey
 
-- `src/extension.ts` — VS Code extension commands + export logic.
-- `media/editor.js` — Webview editor logic (canvas + inspector).
-- `media/editor.css` — Webview styles.
+**Tips**
+- If you edit Mermaid text directly, include the `%% mermaid-magic` marker so imports round-trip cleanly.
+- When multiple nodes are selected, the side pane shows shared shape, fill, and stroke options.
+
+If you want support for additional Mermaid diagram types or export formats, open an issue on the project repository.
